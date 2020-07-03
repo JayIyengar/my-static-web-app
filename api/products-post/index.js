@@ -1,10 +1,11 @@
-const data = require('../shared/product-data');
+const data = require("../shared/product-data");
 
 module.exports = async function (context, req) {
   const product = {
     id: undefined,
     name: req.body.name,
     description: req.body.description,
+    quantity: parseInt(req.body.quantity),
   };
 
   try {
